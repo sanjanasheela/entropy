@@ -1,8 +1,17 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{List of Figures}{iv}{section*.4}%
+\contentsline {section}{List of Tables}{v}{section*.6}%
+\contentsline {section}{List of Acronyms}{vi}{section*.8}%
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
-\contentsline {section}{\numberline {2}Historical Background}{1}{section.2}%
-\contentsline {section}{\numberline {3}Genetic Information and DNA Encoding}{1}{section.3}%
-\contentsline {section}{\numberline {4}Neural Information Processing}{1}{section.4}%
-\contentsline {section}{\numberline {5}Evolutionary Information Theory}{1}{section.5}%
-\contentsline {section}{\numberline {6}Applications in Modern Biology}{1}{section.6}%
-\contentsline {section}{\numberline {7}Conclusion}{1}{section.7}%
-\contentsline {section}{\numberline {8}References}{1}{section.8}%
+\contentsline {section}{\numberline {2}Quantification of Biological Complexity}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}First Subsection}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Second Subsection}{1}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Maximum Entropy Principle in Pharmacokinetics}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Pharmacokinetics}{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Maximum Entropy Principle}{1}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Application of MEP in Pharmacokinetics}{1}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.3}Yet another Subsection}{1}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Last Subsection}{2}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Conclusion}{2}{section.4}%
+\contentsline {section}{References}{3}{section*.10}%
+\contentsline {section}{\numberline {A}Appendix}{3}{appendix.A}%

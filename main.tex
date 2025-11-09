@@ -1,93 +1,244 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage{geometry}
-\usepackage{setspace}
-\usepackage{fancyhdr}
-\usepackage{amsmath, amssymb}
+\documentclass{micro-econ-thesis}
+% \geometry{left=0.1in, right=0.1in, top=0.2in, bottom=0.2in}
+% \geometry{a4paper, margin=0.8in}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{appendix}
 \usepackage{graphicx}
-\usepackage{geometry}
+\usepackage{pdfpages}
 \usepackage{setspace}
-\usepackage{titlesec}
-\usepackage{titling}
-\usepackage{fancyhdr}
-\usepackage{tocloft}
+\usepackage[giveninits=true, uniquename=init, authordate]{biblatex-chicago}
 \usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\setlength{\textfloatsep}{10pt plus 1pt minus 2pt}
+\setlength{\intextsep}{8pt plus 1pt minus 2pt}
 
-\geometry{
-  left=1in,
-  right=1in,
-  top=1in,
-  bottom=1in
-}
-\setstretch{1.3}
+
+
+\addbibresource{bibliography.bib}
 
 \begin{document}
 
-% ---------- COVER PAGE ----------
-\begin{titlepage}
-    \centering
-    \vspace*{2cm}
+\centering
+\vspace*{2cm}
 
-    {\Huge \bfseries Information Theory in Biology \par}
-    \vspace{1.5cm}
+{\LARGE \textbf{Information Theory in Biology}}\\[1.5cm]
 
-    {\Large \textbf{Course: 13 Information Theory in Biology}\par}
-    \vspace{2.5cm}
+{\large A Project Report submitted to IIIT Hyderabad in fulfillment of the requirements for the Entropy and Information course}\\[1.5cm]
 
-    {\large \textbf{}\\[0.5cm]
-    Aanchal Mundhada \hfill 2023112016\\
-    Sanjana Sheela \hfill 2023102027\\
-    Pragnya Tatiparthi \hfill 2023102067\\
-    Parth Tokekar \hfill 2023102041\\[2cm]}
+\includegraphics[width=0.40\textwidth]{iiith_logo.png}\\[0.5 cm]
 
-    {}\par
+\begin{minipage}{0.45\textwidth}
+\begin{flushleft}
+\textbf{Sanjana Sheela}\\
+Roll No: 2023102027\\
+Robotics Research Centre (RRC),\\
+IIITH
+\end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{flushright}
+\textbf{Rohit Varma Chiluvuri}\\
+Roll No: 2022102028\\
+Signal Processing and Communication\\
+Research Centre (SPCRC),\\
+IIITH
+\end{flushright}
+\end{minipage}\\[1.2cm]
 
-    \vfill
+\begin{minipage}{0.45\textwidth}
+\begin{flushleft}
+\textbf{Aryan Chandramania}\\
+Roll No: 2021114004\\
+Language Technologies Research Centre (LTRC),\\
+IIITH
+\end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{flushright}
+\textbf{Arthi}\\
+Roll No: 2023212008\\
+SPCRC, IIITH
+\end{flushright}
+\end{minipage}\\[2cm]
 
-    {\large \textbf{Under the Supervision of}\\[0.3cm]
-    Dr. Indranil Chakrabarty\\
-    Associate Professor\\
-    Centre for Quantum Science and Technology (CQST), IIITH
-    }
-\end{titlepage}
+{\large \textbf{Under the Supervision of}}\\[0.2cm]
+{\large \textbf{Dr. Indranil Chakrabarty}}\\[0.2cm]
+{\large Associate Professor}\\
+{\large Centre for Quantum Science and Technology (CQST)}\\
+{\large IIIT Hyderabad}\\[2cm]
+
+\vfill
+\clearpage
 
 
 
 
-% ---------- INDEX ----------
-\newpage
+% ----------------------------------------------------------------------------
+% Abstract
+% ----------------------------------------------------------------------------
+\raggedright
+\cleardoublepage
 \pagenumbering{roman}
-\tableofcontents
-\newpage
+\pagestyle{plain}
+\subsection*{Abstract}
+Short summary of your thesis (max. 250 words) \ldots
 
-% ---------- MAIN CONTENT ----------
+\clearpage
+\subsection*{Acknowledgements}
+
+If you want to thank anyone (optional) \ldots
+
+% ----------------------------------------------------------------------------
+% Table of contents
+% ----------------------------------------------------------------------------
+\cleardoublepage
+
+\tableofcontents
+
+% ----------------------------------------------------------------------------
+% List of figures/tables
+% ----------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{section}{\listfigurename}
+\listoffigures
+% --------------------------
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{section}{\listtablename}
+\listoftables
+% --------------------------
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{section}{List of Acronyms}
+\section*{List of Acronyms}
+\begin{tabular}{@{}ll}
+FSU Jena & Friedrich-Schiller-Universität Jena\\
+\end{tabular}
+
+% --------------------------
+
+% ----------------------------------------------------------------------------
+% Contents
+% ----------------------------------------------------------------------------
+\cleardoublepage
+\pagestyle{fancy}
 \pagenumbering{arabic}
+\setcounter{page}{1}
+% Contents
+\singlespacing % for linespacing 1.5, you can turn it off with \singlespacing, e.g. for quotes or tables with multiline cells
+
 
 \section{Introduction}
-Brief introduction to Information Theory and its relevance in biological systems.
+\label{sec:intro}
 
-\section{Historical Background}
-Discuss Shannon’s foundational work and how it influenced the study of biological communication.
+Some of your text. Maybe with an acronym, such as Friedrich-Schiller-Universität Jena (FSU Jena).
 
-\section{Genetic Information and DNA Encoding}
-How biological systems store, process, and transmit genetic information.
 
-\section{Neural Information Processing}
-Information-theoretic approaches to studying neurons, entropy, and signaling pathways.
+\section{Quantification of Biological Complexity}
+\label{sec:first}
 
-\section{Evolutionary Information Theory}
-How information theory explains adaptation, mutation, and selection in evolution.
 
-\section{Applications in Modern Biology}
-Use in genomics, protein folding, and systems biology.
+\subsection{First Subsection}
+\label{subsec:first}
+
+
+\subsection{Second Subsection}
+\label{subsec:second}
+
+Some more of your text. Maybe you want to cite \textcite{Nels1959} or enforce a statement because many have said that before \parencite[e.g.][]{NeWi1982, Dosi1982, Lund1992,Acem2002}. You might want to refer to subsection~\ref{subsec:first}, where you defined some important concepts.
+
+
+\section{Maximum Entropy Principle in Pharmacokinetics}
+\label{sec:second}
+
+\subsection{Pharmacokinetics}
+\label{subsec:another}
+Here is a reference to Table~\ref{t1:tab}. In Figure~\ref{fig:pasteur}, you see ... . 
+
+\subsection{Maximum Entropy Principle}
+\label{subsec:another}
+The Maximum Entropy Principle states that when a system has a set of known constraints, the probability distribution that best represents the true distribution is the one that has the maximum entropy.
+
+\subsubsection{Application of MEP in Pharmacokinetics}
+\label{subsubsec:application}
+In pharmacokinetics, the Maximum Entropy Principle can be used to model the distribution of
+
+\begin{table}[ht]
+  \centering
+  \caption{GDP per capita}
+  \begin{tabular}{lr}
+     \hline
+     Country & \multicolumn{1}{c}{GDP per capita}\\ \hline 
+     Qatar & 132,099 \\ 
+     Luxembourg & 98,987 \\ 
+     Singapore & 85,253 \\ \hline
+  \end{tabular}\\
+	Source: International Monetary Fund (2015) 
+  \label{t1:tab}
+\end{table}  
+
+
+\begin{figure}[ht]
+  \centering
+	\includegraphics[width=.75\textwidth]{figures/Pasteurs-quadrant.pdf}
+  {\small\flushleft Source: Donald E. Stokes, Pasteur's Quadrant: Basic Science and Technological Innovation, Brookings Institution Press, 1997.}
+  \caption{Pasteur's Quadrant}   
+    \label{fig:pasteur}
+\end{figure}  
+
+\subsection{Yet another Subsection}
+\label{subsec:yetanother}
+
+If you want to typeset formulas, there is the inline version $ y = x_1^{0.5} x_2^{0.5}$, centered like this
+\[
+y = x_1^{0.5} x_2^{0.5}
+\]
+or numbered:
+\begin{equation}\label{eq:prod}
+y = x_1^{0.5} x_2^{0.5}	
+\end{equation}
+ so that you can refer to equation~\ref{eq:prod} in the text.
+
+\subsection{Last Subsection}
+\label{subsec:last}
+
 
 \section{Conclusion}
-Summarize the findings and relevance of information theory to biology.
 
-\section{References}
-% Example:
-% \begin{thebibliography}{9}
-% \bibitem{shannon1948}
-% C. E. Shannon, "A Mathematical Theory of Communication", Bell System Technical Journal, 1948.
-% \end{thebibliography}
+
+% ----------------------------------------------------------------------------
+% Bibliography
+% ----------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{section}{\refname} % to add Bibliography to toc
+\printbibliography
+
+% --------------------------
+\cleardoublepage
+\begin{appendix}
+\section{Appendix}
+If needed for supplementary material, such as detailed description of data collection, tables, or figures.
+
+\end{appendix}
+
+% ----------------------------------------------------------------------------
+% Statutory declaration as pdf
+% ----------------------------------------------------------------------------
+\includepdf{Declaration of Academic Integrity.pdf}
+
 
 \end{document}
+
